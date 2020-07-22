@@ -1,0 +1,177 @@
+Efeito cascata. Em forma crescente de prioridade
+
+- folha padrão do navegador
+= folha de estilo do usuario
+- folha de estilo do desenvolvedor
+    - estilo externo (importado)
+    - estilo incoporado (definido no head/tag)
+    - estilo inline (dentro do elemento)
+- Marcação imporante ("!")
+
+================================
+
+Há 3 formas de declarar estilo css.
+
+- Inline(Style="") 
+- Tag <Style>
+- Importação/link
+
+===================================
+
+Inline = feita diretamente na Tag
+exemplo
+
+<div style="height:100px"></div>
+<p style="color:red">meu texto vermelho</p>
+
+===================================
+
+Tag <style>
+
+Codigos declarados diretamente no código HTML através da tag <style> 
+(na head para afetar toda a pagina)
+(no body só pra afetar aquela parte)
+
+<head>
+    <style>
+        p {
+            color:red
+        }
+    </style>
+</head>
+<body>
+    <p>meu texto em vermelho </p>
+</body>
+
+=====================================
+
+Importação (o mais recomendado)
+
+Estilo importado por um arquivo ".css" importado separado
+
+Chama o arquivo da seguinte forma:
+
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+</head>
+
+===============================================
+
+Sintaxe
+
+Seletor{
+    Declarações:Valor;
+}
+
+Seletor pode ser: Classes, IDs e Tags 
+
+Exemplo:
+
+/* CSS */
+
+body {
+    font-family:Arial;
+    font-style:italic;
+}
+
+p {
+    font-family:Courier;
+    font-style:none;
+}
+
+==============================================================
+
+Classes e IDs
+
+IDs
+- Identificadores únicos/ pode ter um identificador por elemento/pagina inteira
+- Declarados com #
+- URLs
+    -www.site.com/#id
+
+Classes
+- Apresenta um estilo a um grupo de elementos que recebe aquela classe
+- pode haver vários identificadores
+- Declarado com .
+
+================================================
+
+Exemplo Plano de fundo 
+- Aplicados a body ou qualquer outra tag (ex: tag)
+- Inserindo uma cor
+    - background-color:#F4F4F4
+- Inserindo uma imagem
+    - background-image:url(app/img/bg.jpg)
+
+Exemplo Posição
+- define a posição de um elemento em uma página
+- prioridade padrão:
+    -top
+    -left
+    -right
+    -bottom
+
+Exemplo Position:fixed 
+(O elemento fica fixado em uma posição, perfeito para menus)
+
+Exemplo Position:relative
+-Posiona elemento com base no canto superior esquerdo 
+- Apenas Float:left ou right
+- Uma div relative não sobrepoe outra.
+
+Exemplo Position:absolute
+- Utiliza o canto superior esquerdo do PAI pra se posicionar 
+- Se não houver pai, utiliza o <body> para se referenciar
+- Uma div pode se sobrepor a outra.
+
+=======================================
+
+Texto 
+
+    Fonte
+        -font-family: helvetice, arial;
+    cor
+        -color#111111;
+    Tamanho
+        -font-size:12px;
+    Negrito
+        -font-weight:bold;
+    Espacamento
+        -line-height:1.5;
+
+Tamanho e Espacamento
+    largura
+        -width:100px;
+    Altura
+        -height:100px;
+
+Boxmodel (só div)
+    div{
+        margin:10px; [borda externa]
+        border:10px solid #000; [fica preta]
+        padding:10px; [borda interna]
+    }
+
+tem alem disso as direções que vão ser lidas na orderm top right bottom left 
+(sentido horário)
+
+exemplo:
+
+margin: 20px 10px vai fazer o lado superior e inferior 20px e o direito e esquerdo 10px
+
+=========================================
+eliminando configurações de border do browser
+
+*{
+    margin:0;
+    padding:0;
+}
+
+Tag "*" significa qualquer coisa
+
+========================================
+Diferença etre padding e margin. 
+
+Margin altera as distâncias da div inteira:
+
+Padding modifica apenas a distância do texto para as bordas, além disso aumenta o tamanho total da div:
